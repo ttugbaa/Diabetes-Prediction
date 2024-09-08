@@ -15,11 +15,11 @@ heart_disease_mapping = {'Yes':1, 'No':0}
 heart_disease = st.selectbox('Heart Disease', ['Yes', 'No'])
 heart_disease_numeric=heart_disease_mapping[heart_disease] 
 bmi = st.number_input('BMI', 1, 100)
-HbA1c_level = st.number_input('HbA1c Level', 1, 50)
+hbA1c_level = st.number_input('HbA1c Level', 1, 50)
 blood_glucose_level = st.number_input('Blood Glucose Level', 1, 400)
 
 if st.button('Predict'):
-    input_data = [[gender_numeric, age, hypertension_numeric, heart_disease_numeric, bmi, HbA1c_level, blood_glucose_level]]
+    input_data = [[gender_numeric, age, hypertension_numeric, heart_disease_numeric, bmi, hbA1c_level, blood_glucose_level]]
     prediction = model.predict(input_data)
     diabetes = {0: 'Negative', 1: 'Positive'}
     predicted_diabetes = diabetes[prediction[0]]
