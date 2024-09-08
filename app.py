@@ -1,10 +1,7 @@
 import streamlit as st
 import pickle
 
-st.title('Diabetes Prediction')
-
-image_url = "https://www.fitterfly.com/blog/wp-content/uploads/2022/10/What-Are-the-Complications-of-Diabetes-copy_11zon.webp"
-st.image(image_url, use_column_width=True)
+st.title('Diabetes Prediction ')
 
 model = pickle.load(open('diabetes.pkl', 'rb'))
 gender_mapping = {'Male':0,'Female':1, 'Other':2}
